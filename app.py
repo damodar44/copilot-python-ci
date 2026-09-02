@@ -6,6 +6,10 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
+#multiplication
+def multiply(a, b):
+    return a * b
+
 # add main function to run
 if __name__ == "__main__":
     print(add(1, 2))

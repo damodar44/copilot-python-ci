@@ -1,6 +1,19 @@
 # use pytest to test the function app.py
 import pytest
-from app import add, subtract
+from app import add, subtract, multiply
+
+def test_multiply():
+    assert multiply(1, 2) == 2
+    assert multiply(-1, 1) == -1
+    assert multiply(0, 0) == 0
+    assert multiply(2, 3) == 6
+    assert multiply(-2, -3) == 6
+    assert multiply(100, 200) == 20000
+    assert multiply(-100, -200) == 20000
+    assert multiply(0, 5) == 0
+    assert multiply(5, 0) == 0
+    assert multiply(-5, 0) == 0
+    assert multiply(0, -5) == 0
 
 def test_add():
     assert add(1, 2) == 3
@@ -32,4 +45,5 @@ def test_subtract():
 if __name__ == "__main__":
     test_add()
     test_subtract()
+    test_multiply()
     print ("All tests passed!")
